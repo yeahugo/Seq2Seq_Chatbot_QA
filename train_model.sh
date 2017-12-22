@@ -25,4 +25,4 @@ python3 s2s.py \
 --num_per_epoch 500000 \
 --test $test_arg \
 --bleu $bleu_arg \
---model_dir ./model/model1
+--model_dir model

@@ -70,7 +70,7 @@ tf.app.flags.DEFINE_string(
 )
 tf.app.flags.DEFINE_string(
     'model_name',
-    'model',
+    'model1',
     '模型保存的名称'
 )
 tf.app.flags.DEFINE_boolean(
@@ -192,7 +192,8 @@ def train():
 
         if not os.path.exists(FLAGS.model_dir):
             os.makedirs(FLAGS.model_dir)
-        model.saver.save(sess, os.path.join(FLAGS.model_dir, FLAGS.model_name))
+        #model.saver.save(sess, os.path.join(FLAGS.model_dir, FLAGS.model_name))
+        model.saver.save(sess,FLAGS.model_dir+FLAGS.model_name)
 
 
 def test_bleu(count):
